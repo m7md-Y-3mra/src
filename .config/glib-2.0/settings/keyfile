@@ -1,0 +1,8 @@
+[org/gtk/gtk4/settings/file-chooser]
+sort-directories-first=false
+show-hidden=true
+
+[org/gnome/nautilus/preferences]
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+default-folder-viewer='icon-view'

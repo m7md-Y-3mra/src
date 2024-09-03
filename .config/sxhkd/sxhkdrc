@@ -1,0 +1,15 @@
+super + Return 
+	$TERMINAL
+
+super + w 
+	$BROWSER
+
+super + shift + BackSpace
+	$HOME/bin/exit.sh
+
+#super + [equal, minus, BackSpace]
+	#$HOME/bin/volume.sh [up, down, toggle]
+
+#super + m
+#	$HOME/bin/mount.sh
+

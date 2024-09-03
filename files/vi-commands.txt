@@ -1,0 +1,106 @@
+vim motions:
+vim editor:
+- actual vim binary 
+
+vim plugins:
+- vim functionality can be extended using many community maintained plugins
+- you can literally turn the vim editor into vim as and IDE
+
+----------------------------------------------------------------------------
+=> VIM MOTIONS <=
+ - consist three of modes
+      1. normal mode     2. insert mode    3. visual mode 
+
+think of these modes as two separate keyboards, sitting on top of each other, the keyboard in top in normal mode where you type all the vim commands, the keyboad at the bottom is where you actually write the code this called insert mode, visual mode works on top of normal mode and help us visuall select and manipulate text
+there is anthor special mode called command mode which helps us give commands to the text editor 
+
+visual mode
+normal mode
+insert mode
+
+ -------------
+| visual mode |
+ -------------
+has two varieties
+  normal visual mode => works the same as selecting text with a mouse 
+  block visual mode => select the text as a block 
+  
+ -------------
+| normal mode |
+ -------------
+  Horizontal Navigationavigation
+  => navigate up dowm left and right k j h l
+      these command can be prefixed with a number typing 5j will move us five times down
+
+  to jump begining of every word
+  => using w will navigate forward word by word
+  => usin b will navigate backward word by word
+
+  to jump end of the word
+  using e , can prefix by number 5w, will move us five words forward 
+
+  => using $ key jump to the end of the line 
+  => using 0 key jump to the beginning of the line
+  => using ^ we jump to the first non-empty character on the line
+  => using f + combination of char key to jump to a specifc character on the line 
+
+  Vertical Navigation
+  using parentheses to move one sentence up or dowm
+  using curly braces to move one paragraph up and dwon 
+  using ctrl + d, ctrl + u to move up and down half a page at a time 
+  using ctrl + F, ctrl + B to move full page 
+  using 2 times G to move the start of page
+  using G to move to the end of the page
+ -------------
+| insert mode |
+ -------------
+  (i o a)
+  using i key to insert before the cursor
+  using a key to insert after the cursor
+  using I key to insert at the begining of the line
+  using A key to insert at the end of the line
+  using o key to insert after the current line
+  using O key to insert befor the current line
+
+  using c key change a word
+  using s to replace the current character and enter insert mode
+
+  y and p 
+  using yy to copy a whole line
+  using p to paste 
+  using Y i and the respective curly braces bracket or parenthesis to copy text between parentheses, curly braces or square brackets
+  using Y i and the respective curly braces bracket or parenthesis to paste text between parentheses, curly braces or square brackets
+  using u to undo the last change 
+  using crl + r to redo all the changes
+  using D and either w s or p to delete a word sentence or  paragraph 
+  using d twice to delete line
+  using dt to delete up to a specfic character
+  using . to repeat key, repeat any operation perfomed in normal mode
+  using c i and w to perform the change word operation
+  
+
+  using / and search term to serach forwad 
+    this will match the first result forwad from the cursor position
+    we can iterate on search result forward by typing the N key on the keyboad
+    we can iteraate backward by typing the capital N letter
+  using * to search forward for the word under the cursor
+  using # to search for the current word backward 
+
+  marks in vim like bookmarks to mark a position with the letter A we can type m + k, this action bookmarks the position under the letter a, now if we move around and want to return to the bookmark we can type the back tick character and the name of the bookmark
+  vim has lots of predefined bookmarks and two essential bookmarks are available first, if we want to toggle between last two visited place, we can type back back tick twice and we will toggle between the last two positions
+  second if we want to visit the position where the last editing happened we can type back tick and dot key
+
+
+intermediate level features in vim motions
+
+to fold all code blocks in our code use can use z key in combination with the capital M key this ation folds all blocks including nested ones, to open all folds we can type z with the capital R key, individual folds can be folded by typing z and the c key and unfolded by typing z and o key
+
+line indenting here appears to be incorrect, single lines can be auto indented by two times equal signs, alternatively all lines can be visually selected indented by typing an equal sign to shift selected lines to the right use the greater than sign, to shift left use the less than sign, this action can be repeated by typing dot key
+
+we want to append the prefix dashboard to all of these paths we can take advantage of visual block mode for this task by selecting the paths vertically and pressing captial I we will enter to insert mode, after typing the desired prefix and pressing the Escape key, this modification will be automactially appiled to all the previously seleted lines
+
+if we want to make changes at mutiple places in a line we can use marco recording to start recording we will press the letter q and a, the macro will be stored as the character a, we can see that the recording has started, now we can jump to the first double quote by typing f and double quote here we will apeand text pressing the a letter, we will type our prefix and exit into normal mode, nex we can go to the next space by typing f and space start appendinng the text, we want exit into normal mode and jump to the next line, now let's stopp recording by typing q again, if we type the ersat and the name of recording, in our case a the recording will be applied, let's apply it again, if we want to aplly it to the remaining lines we can type a number and and apply 
+
+but how do  we know how many lines are remaining,  what is the exact number for that, we can enable relative numbering inside vim by typing set relative number
+
+

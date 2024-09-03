@@ -1,0 +1,6 @@
+:open http://localhost:5173
+:open youtube.com
+:tab-prev
+:open http://localhost:5173/
+:open -O http://localhost:5173/
+:quit
